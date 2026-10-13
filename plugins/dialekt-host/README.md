@@ -21,7 +21,7 @@ Publish what you build with Claude Code or Codex to `https://<name>.dialektai.or
 codex plugin marketplace add vibecoderkz/dialekt-plugins
 ```
 
-Then install `dialekt-host`. Codex needs a token: create one at https://host.dialektai.org (Tokens) and export it before starting Codex: `export DIALEKT_HOST_TOKEN=dlk_...`. Do not paste the token into the chat.
+Then install `dialekt-host`. The Codex build needs a token (OAuth is not supported there yet): create one at https://host.dialektai.org (Tokens) and export `DIALEKT_HOST_TOKEN=dlk_...` before starting Codex. Do not paste the token into the chat.
 
 **Without a plugin** (any MCP client). Claude Desktop, claude.ai and ChatGPT: add a custom connector with the URL `https://mcp.dialektai.org/mcp` and press Connect. With a token instead of OAuth:
 
@@ -30,5 +30,24 @@ claude mcp add --transport http dialekt-host https://mcp.dialektai.org/mcp --hea
 ```
 
 Then ask your agent: "publish this site".
+
+## What it does and what data it sends
+
+The plugin adds one remote MCP server, `https://mcp.dialektai.org/mcp`, and one skill (`deploy-app`). It runs no local code and starts no local processes.
+
+When you ask your agent to publish, it sends the following to Dialekt Host and nothing else:
+
+- the files of the site you chose to publish (HTML, CSS, JS, images), either inline or as an archive uploaded to a one-time URL;
+- the project name and the actions you ask for (create, deploy, stop, resume, delete, status);
+- an access token issued after you press **Allow** (OAuth 2.1, one hour, refreshable; revocable in the dashboard).
+
+Dialekt Host stores your email, hashes of tokens and sessions, the published files and an activity log. Everything you publish is public at `https://<name>.dialektai.org`. The plugin does not read your other files, your environment or your conversation; the agent decides what to upload when you ask it to publish. Deleting a project needs a separate permission that you grant on the consent page.
+
+- Privacy Policy: https://host.dialektai.org/en/privacy
+- Terms of Service: https://host.dialektai.org/en/terms
+- Report a site: https://host.dialektai.org/report
+- Support: hello@dias.now
+
+License: proprietary, see [LICENSE](LICENSE).
 
 Developed by Dias Zhumagaliyev, https://dias.now. Contact: hello@dias.now.

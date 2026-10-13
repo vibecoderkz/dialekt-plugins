@@ -1,11 +1,18 @@
 {
   "name": "dialekt-plugins",
-  "interface": { "displayName": "Dialekt plugins" },
+  "interface": {
+    "displayName": "Dialekt plugins"
+  },
   "plugins": [
     {
       "name": "dialekt-host",
-      "source": { "source": "local", "path": "./plugins/dialekt-host" },
-      "interface": { "displayName": "Dialekt Host" }
+      "source": {
+        "source": "local",
+        "path": "./plugins/dialekt-host-codex"
+      },
+      "interface": {
+        "displayName": "Dialekt Host"
+      }
     }
   ]
 }

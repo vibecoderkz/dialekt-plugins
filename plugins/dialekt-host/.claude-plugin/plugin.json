@@ -1,7 +1,7 @@
 {
   "name": "dialekt-host",
   "displayName": "Dialekt Host",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Publish what you build with your AI agent to <name>.dialektai.org: describe it, the agent deploys it and returns the address.",
   "author": {
     "name": "Dias Zhumagaliyev",
@@ -16,5 +16,9 @@
     "deploy",
     "static-site",
     "mcp"
-  ]
+  ],
+  "icon": "./.claude-plugin/icon.png",
+  "privacyPolicyUrl": "https://host.dialektai.org/en/privacy",
+  "termsOfServiceUrl": "https://host.dialektai.org/en/terms",
+  "supportUrl": "https://dias.now"
 }
