@@ -8,6 +8,8 @@ Publish what you build with Claude Code or Codex to `https://<name>.dialektai.or
 
 **Claude Code**
 
+(The plugin marketplace is private; the command below works if you have been given access. Otherwise use the single command in the last section or in the Dialekt Host panel.)
+
 ```
 /plugin marketplace add vibecoderkz/dialekt-plugins
 /plugin install dialekt-host
