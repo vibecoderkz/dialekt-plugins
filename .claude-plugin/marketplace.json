@@ -1,0 +1,15 @@
+{
+  "name": "dialekt-plugins",
+  "owner": {
+    "name": "Dias Zhumagaliyev",
+    "email": "hello@dias.now"
+  },
+  "plugins": [
+    {
+      "name": "dialekt-host",
+      "source": "./plugins/dialekt-host",
+      "description": "Publish what you build with your AI agent to <name>.dialektai.org."
+    }
+  ],
+  "description": "Plugins from Dialekt: publish what your AI agent builds to your own address."
+}

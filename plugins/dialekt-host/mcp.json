@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "dialekt-host": {
+      "type": "http",
+      "url": "https://mcp.dialektai.org/mcp",
+      "headers": { "Authorization": "Bearer ${DIALEKT_HOST_TOKEN}" }
+    }
+  }
+}
