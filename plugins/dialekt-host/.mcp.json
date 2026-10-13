@@ -2,8 +2,7 @@
   "mcpServers": {
     "dialekt-host": {
       "type": "http",
-      "url": "https://mcp.dialektai.org/mcp",
-      "headers": { "Authorization": "Bearer ${user_config.api_token}" }
+      "url": "https://mcp.dialektai.org/mcp"
     }
   }
 }

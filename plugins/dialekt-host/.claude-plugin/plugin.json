@@ -1,19 +1,20 @@
 {
   "name": "dialekt-host",
   "displayName": "Dialekt Host",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Publish what you build with your AI agent to <name>.dialektai.org: describe it, the agent deploys it and returns the address.",
-  "author": { "name": "Dias Zhumagaliyev", "email": "hello@dias.now", "url": "https://dias.now" },
+  "author": {
+    "name": "Dias Zhumagaliyev",
+    "email": "hello@dias.now",
+    "url": "https://dias.now"
+  },
   "homepage": "https://host.dialektai.org",
   "repository": "https://github.com/vibecoderkz/dialekt-plugins",
   "license": "UNLICENSED",
-  "keywords": ["hosting", "deploy", "static-site", "mcp"],
-  "userConfig": {
-    "api_token": {
-      "type": "string",
-      "title": "Dialekt Host API token",
-      "description": "Create it at https://host.dialektai.org (Tokens). It starts with dlk_. Do not paste it into chat.",
-      "sensitive": true
-    }
-  }
+  "keywords": [
+    "hosting",
+    "deploy",
+    "static-site",
+    "mcp"
+  ]
 }
