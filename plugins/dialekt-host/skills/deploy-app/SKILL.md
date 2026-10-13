@@ -21,7 +21,7 @@ Dialekt Host serves static sites (HTML, CSS, JS, images) at `https://<name>.dial
 
 - Never ask the user for, print, or write down any token or password. Sign-in happens in the browser. If a tool says authorization is required or the connection was lost, tell the user to connect again: in Claude Code run `/mcp`, choose dialekt-host and authenticate; in Claude Desktop press Connect. They sign in at https://host.dialektai.org and press Allow.
 - Never put secrets in the site: `.env`, keys and credentials are rejected by the server and must not be published.
-- Deleting is permanent for the address: call `delete_project` only when the user explicitly asks, and pass the exact project name in `confirm`. Stopping (`project_control` with `stop`) is the reversible choice.
+- Deleting frees the address and erases the files after 30 days: call `delete_project` only when the user explicitly asks, and pass the exact project name in `confirm`. Stopping (`project_control` with `stop`) is the reversible choice.
 - Report problems with the error `code` and what you changed to fix them, in one or two sentences.
 
 ## Other actions

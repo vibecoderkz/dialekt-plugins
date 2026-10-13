@@ -1,6 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "dialekt-host",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Publish what you build with your AI agent to <name>.dialektai.org: the agent deploys it and returns the address."
 }

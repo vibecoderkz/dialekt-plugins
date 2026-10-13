@@ -31,6 +31,14 @@ claude mcp add --transport http dialekt-host https://mcp.dialektai.org/mcp --hea
 
 Then ask your agent: "publish this site".
 
+## Examples
+
+- "Publish this folder as a website." The agent checks your limits, picks a free name, uploads the built site and returns `https://<name>.dialektai.org`.
+- "Is the name `my-cafe` free? If yes, create it and publish the landing page I just built."
+- "Update my site, and if something breaks go back to the previous version." (`rollback`)
+- "Take `my-cafe` offline for now." (`stop`; `start` brings it back.)
+- "Delete the project `old-demo`." (needs the separate delete permission; files are kept 30 days, then erased.)
+
 ## What it does and what data it sends
 
 The plugin adds one remote MCP server, `https://mcp.dialektai.org/mcp`, and one skill (`deploy-app`). It runs no local code and starts no local processes.
@@ -41,7 +49,7 @@ When you ask your agent to publish, it sends the following to Dialekt Host and n
 - the project name and the actions you ask for (create, deploy, stop, resume, delete, status);
 - an access token issued after you press **Allow** (OAuth 2.1, one hour, refreshable; revocable in the dashboard).
 
-Dialekt Host stores your email, hashes of tokens and sessions, the published files and an activity log. Everything you publish is public at `https://<name>.dialektai.org`. The plugin does not read your other files, your environment or your conversation; the agent decides what to upload when you ask it to publish. Deleting a project needs a separate permission that you grant on the consent page.
+Dialekt Host stores your email, hashes of tokens and sessions, the published files and an activity log. Everything you publish is public at `https://<name>.dialektai.org`. The plugin does not read your other files, your environment or your conversation; the agent decides what to upload when you ask it to publish. Deleting a project needs a separate permission that you grant on the consent page. Deleted sites and accounts are kept in an archive for 30 days and then erased from disk.
 
 - Privacy Policy: https://host.dialektai.org/en/privacy
 - Terms of Service: https://host.dialektai.org/en/terms
